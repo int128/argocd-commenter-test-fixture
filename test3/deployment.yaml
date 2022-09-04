@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echoserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echoserver
+  template:
+    metadata:
+      labels:
+        app: echoserver
+    spec:
+      containers:
+        # this may cause crash loop
+        - image: gcr.io/google_containers/echoserver:dummy
+          name: echoserver
+          ports:
+            - containerPort: 8080
