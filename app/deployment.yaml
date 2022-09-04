@@ -13,7 +13,8 @@ spec:
         app: echoserver
     spec:
       containers:
-        - image: gcr.io/google_containers/echoserver:1.8
+        # this may cause crash loop
+        - image: gcr.io/google_containers/echoserver:dummy
           name: echoserver
           ports:
             - containerPort: 8080
