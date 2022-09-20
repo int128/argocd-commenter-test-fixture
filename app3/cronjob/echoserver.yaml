@@ -9,7 +9,7 @@ spec:
       template:
         metadata:
           labels:
-            app: echoserver
+            app: echoserver-test3
         spec:
           restartPolicy: Never
           containers:
