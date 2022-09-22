@@ -16,7 +16,7 @@ spec:
           restartPolicy: Never
           containers:
             # https://hub.docker.com/_/busybox/
-            - image: busybox:1.28
+            - image: busybox:1.30
               name: echoserver
               command:
                 - /bin/sh
